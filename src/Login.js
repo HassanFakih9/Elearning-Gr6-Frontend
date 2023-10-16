@@ -80,10 +80,11 @@ function Login({ setUserRole }) {
   };
   return (
     <div>
-      <div class="main"> 
-      <div class="signup">
+      <div className="main"> 
+      <input type="checkbox" id="chk" aria-hidden="true"></input>
+      <div className="signup">
         <form>
-        <label for="chk" aria-hidden="true">Sign up</label>
+        <label className="signup_login" for="chk" aria-hidden="true">Sign up</label>
       <input
         type="text"
         placeholder="Name"
@@ -117,17 +118,17 @@ function Login({ setUserRole }) {
         <option value="teacher">Teacher</option>
         <option value="admin">Admin</option>
       </select>
-      <button onClick={handleSignup}>Sign Up</button>
+      <button  onClick={handleSignup}>Sign Up</button>
 
       {message && <p>{message}</p>}
       </form>
       </div>
-      <div class="login">
-      <label for="chk" aria-hidden="true">Login</label>
+      <div className="login">
+      <label className="signup_login" for="chk" aria-hidden="true">Login</label>
       <form onSubmit={handleSubmit}>
         <label>
           Email:
-          <input
+          <input className="email_input"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -135,7 +136,7 @@ function Login({ setUserRole }) {
         </label>
         <label>
           Password:
-          <input
+          <input className="email_input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
