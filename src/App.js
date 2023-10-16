@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Login from './Login';
+import StudentDashboard from './StudentDashboard';
+import TeacherDashboard from './TeacherDashboard';
+import AdminDashboard from './AdminDashboard';
 
 function App() {
+  const [userRole, setUserRole] = useState(null);
+
+  const handleSetUserRole = (role) => {
+    setUserRole(role);
+  };
+
+  function RedirectToLogin() {
+    // Use the navigate function to redirect to the login page
+    return <Navigate to="/login" replace />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login setUserRole={handleSetUserRole} />} />
+
+        <Route path="/student" element={userRole === 'student' ? <StudentDashboard /> : <RedirectToLogin />} />
+        <Route path="/teacher" element={userRole === 'teacher' ? <TeacherDashboard /> : <RedirectToLogin />} />
+        <Route path="/admin" element={userRole === 'admin' ? <AdminDashboard /> : <RedirectToLogin />} />
+        
+        <Route path="*" element={<RedirectToLogin />} />
+      </Routes>
+    </Router>
   );
 }
 
