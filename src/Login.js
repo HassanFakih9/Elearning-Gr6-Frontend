@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Styles/login.css';
 
 function Login({ setUserRole }) {
   const [email, setEmail] = useState('');
@@ -79,27 +80,10 @@ function Login({ setUserRole }) {
   };
   return (
     <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-      <h2>Sign Up</h2>
+      <div class="main"> 
+      <div class="signup">
+        <form>
+        <label for="chk" aria-hidden="true">Sign up</label>
       <input
         type="text"
         placeholder="Name"
@@ -136,6 +120,31 @@ function Login({ setUserRole }) {
       <button onClick={handleSignup}>Sign Up</button>
 
       {message && <p>{message}</p>}
+      </form>
+      </div>
+      <div class="login">
+      <label for="chk" aria-hidden="true">Login</label>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Email:
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+      </div>
+      </div>
     </div>
   );
 }
