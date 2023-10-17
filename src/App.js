@@ -4,6 +4,7 @@ import Login from './Login';
 import StudentDashboard from './StudentDashboard';
 import TeacherDashboard from './TeacherDashboard';
 import AdminDashboard from './AdminDashboard';
+import About from './Components/About'
 
 function App() {
   const [userRole, setUserRole] = useState(null);
@@ -18,6 +19,8 @@ function App() {
   }
 
   return (
+    <div>
+      <About/>
     <Router>
       <Routes>
         <Route path="/login" element={<Login setUserRole={handleSetUserRole} />} />
@@ -29,6 +32,7 @@ function App() {
         <Route path="*" element={<RedirectToLogin />} />
       </Routes>
     </Router>
+    </div>
   );
 }
 

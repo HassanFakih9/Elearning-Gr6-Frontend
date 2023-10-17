@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Styles/login.css';
+import './CSS/login.css';
 
 function Login({ setUserRole }) {
   const [email, setEmail] = useState('');
@@ -80,6 +80,7 @@ function Login({ setUserRole }) {
   };
   return (
     <div>
+      <div className="login-body">
       <div className="main"> 
       <input type="checkbox" id="chk" aria-hidden="true"></input>
       <div className="signup">
@@ -144,6 +145,7 @@ function Login({ setUserRole }) {
         </label>
         <button type="submit">Submit</button>
       </form>
+      </div>
       </div>
       </div>
     </div>
