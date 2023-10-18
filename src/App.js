@@ -5,6 +5,7 @@ import StudentDashboard from './StudentDashboard';
 import TeacherDashboard from './TeacherDashboard';
 import AdminDashboard from './AdminDashboard';
 import About from './Components/About'
+import HeroSection from './Components/HeroSection';
 
 function App() {
   const [userRole, setUserRole] = useState(null);
@@ -20,18 +21,19 @@ function App() {
 
   return (
     <div>
-      <About/>
-    <Router>
-      <Routes>
-        <Route path="/login" element={<Login setUserRole={handleSetUserRole} />} />
+      <HeroSection />
+      <About />
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login setUserRole={handleSetUserRole} />} />
 
-        <Route path="/student" element={userRole === 'student' ? <StudentDashboard /> : <RedirectToLogin />} />
-        <Route path="/teacher" element={userRole === 'teacher' ? <TeacherDashboard /> : <RedirectToLogin />} />
-        <Route path="/admin" element={userRole === 'admin' ? <AdminDashboard /> : <RedirectToLogin />} />
-        
-        <Route path="*" element={<RedirectToLogin />} />
-      </Routes>
-    </Router>
+          <Route path="/student" element={userRole === 'student' ? <StudentDashboard /> : <RedirectToLogin />} />
+          <Route path="/teacher" element={userRole === 'teacher' ? <TeacherDashboard /> : <RedirectToLogin />} />
+          <Route path="/admin" element={userRole === 'admin' ? <AdminDashboard /> : <RedirectToLogin />} />
+
+          <Route path="*" element={<RedirectToLogin />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
