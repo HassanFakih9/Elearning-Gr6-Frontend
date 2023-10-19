@@ -146,6 +146,7 @@
 @media (max-width: 766px) {
     .Mobile {
         display: block;
+        height: 350px;
     }
 
     .Desktop {
@@ -159,31 +160,49 @@
     }
 
     .Mobile-Navbar {
-        position: relative;
-        top: 60px;
-        left: 0;
-        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px;
         color: white;
+        display: flex;
     }
 
     .Mobile-Burger {
         background-color: transparent;
         border: none;
-        padding: 10px;
         color: white;
-        font-size: 14px;
         cursor: pointer;
+        width: 70px;
+    }
+
+    .Mobile-Nav {
+        display: none;
+        flex-direction: column;
     }
 
     .Mobile-Nav.active {
-        display: block;
+        display: flex;
+        position: absolute;
+        top: 120px;
+        left: -1px;
+        z-index: 1;
+        width: 100%;
+        align-items: center;
+        padding: 5px;
+        background: #FFD9E7;
+        opacity: 0.7;
+        border: none;
+        box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.27);
+    }
+
+    .Mobile-Nav-Title {
+        text-decoration: none;
+        color: #4853CD;
     }
 
     .Mobile-Logo {
-        font-size: 14px;
+        padding-top: 10px;
+        text-align: center;
     }
 
     .Mobile-Login {
@@ -194,6 +213,7 @@
         border: none;
         cursor: pointer;
         font-size: 14px;
+        width: 70px;
     }
 
     .Mobile-Header-Hero {
@@ -212,22 +232,21 @@
     }
 
     .Mobile-Hero-description1 {
-        margin-left: 30px;
+        margin-left: 15px;
         color: white;
         padding-bottom: 1%;
     }
 
     .Mobile-Hero-description2 {
         width: 300px;
-        height: 200px;
+        height: 170px;
         border-radius: 20px;
         border: 1px solid rgba(122, 245, 224, 0.12);
         background: rgba(122, 245, 224, 0.25);
         box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.35);
         backdrop-filter: blur(0.20000000298023224px);
         color: white;
-        padding-top: 30px;
-        padding-left: 30px;
+        padding: 15px;
     }
 
     .Mobile-Header-enroll {
@@ -242,6 +261,6 @@
         border: none;
         box-shadow: 6px 6px 4px 0px rgba(0, 0, 0, 0.27);
         align-items: center;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
