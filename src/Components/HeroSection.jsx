@@ -10,7 +10,7 @@ function HeroSection() {
 
     return (
         <div>
-            <div className="Header">
+            <div className="Header-Desktop">
                 <div className='Desktop'>
                     <div className="Header-Navbar">
                         <div className="Header-Logo">Ridge Polyglot</div>
@@ -41,7 +41,7 @@ function HeroSection() {
                 </div>
             </div>
 
-            <div className="Header">
+            <div className="Header-Mobile">
                 <div className='Mobile'>
                     <div className="Mobile-Navbar">
                         <button className="Mobile-Burger" onClick={toggleBurgerMenu}>

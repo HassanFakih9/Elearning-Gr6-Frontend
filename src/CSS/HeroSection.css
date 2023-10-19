@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-.Header {
+.Header-Desktop {
     border-radius: 0px 0px 80px 80px;
     background: linear-gradient(110deg, #4853CD -7.71%, rgba(72, 83, 205, 0.84) 43.03%, rgba(72, 83, 205, 0.00) 103.27%);
     margin-bottom: 50px;
@@ -153,7 +153,11 @@
         display: none;
     }
 
-    .Header {
+    .Header-Desktop {
+        display: none;
+    }
+
+    .Header-Mobile {
         border-radius: 0px 0px 50px 50px;
         background: linear-gradient(110deg, #4853CD -7.71%, rgba(72, 83, 205, 0.84) 43.03%, rgba(72, 83, 205, 0.00) 103.27%);
         margin-bottom: 50px;
@@ -183,7 +187,7 @@
     .Mobile-Nav.active {
         display: flex;
         position: absolute;
-        top: 120px;
+        top: 75px;
         left: -1px;
         z-index: 1;
         width: 100%;
