@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.Teachers-heading {
+    color: #4853CD;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.Teachers-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 80px;
+}
+
+.Teachers-image {
+    height: 240px;
+    width: 200px;
+}

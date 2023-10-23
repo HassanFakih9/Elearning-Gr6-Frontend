@@ -6,6 +6,7 @@ import TeacherDashboard from './TeacherDashboard';
 import AdminDashboard from './AdminDashboard';
 import About from './Components/About'
 import HeroSection from './Components/HeroSection';
+import Teachers from './Components/Teachers';
 
 function App() {
   const [userRole, setUserRole] = useState(null);
@@ -23,6 +24,7 @@ function App() {
     <div>
       <HeroSection />
       <About />
+      <Teachers />
       <Router>
         <Routes>
           <Route path="/login" element={<Login setUserRole={handleSetUserRole} />} />
