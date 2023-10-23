@@ -85,7 +85,7 @@ function Login({ setUserRole }) {
       <input type="checkbox" id="chk" aria-hidden="true"></input>
       <div className="signup">
         <form>
-        <label className="signup_login" for="chk" aria-hidden="true">Sign up</label>
+        <label className="signup_login" htmlFor="chk" aria-hidden="true">Sign up</label>
       <input
         type="text"
         placeholder="Name"
@@ -125,7 +125,7 @@ function Login({ setUserRole }) {
       </form>
       </div>
       <div className="login">
-      <label className="signup_login" for="chk" aria-hidden="true">Login</label>
+      <label className="signup_login" htmlFor="chk" aria-hidden="true">Login</label>
       <form onSubmit={handleSubmit}>
         <label>
           Email:

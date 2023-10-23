@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+    
+.teachdash-maincontainer{
+    display: flex;
+    gap: 3%;
+    height: fit-content;
+}
+
+.side-bar{
+    border-radius: 0px 20px 20px 0px;
+    background: linear-gradient(283deg, #4853CD -8.86%, rgba(72, 83, 205, 0.84)
+     53.99%, rgba(72, 83, 205, 0.00) 128.61%);
+     width: fit-content;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.about-teacher-dash{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.label-teach-profile{
+    font-size: 25px;
+    font-weight: 600;
+}
+.teacher-img{
+    border-radius: 50%;
+
+}
+
+.teacher-name{
+    color: #FFF;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 10%;
+}
+
+.teacher-mail{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sidebar-menu{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+ 
+}
+
+.elements{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.svg-teach-dash{
+    width: 50px;
+height: 40px;
+margin-top: 32px;
+}
+
+.sidebar-menu-elements{
+    margin-top: 20%;
+}
+
+.sign-out{
+    margin-top: 20%;
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/*profile*/
+.main-dashboard-profile{
+    display: flex;
+    flex-direction: column;
+}
+
+.role{
+    color: #4853CD;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    background: #FFD9E7;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 1%;
+}
+
+.profile{
+    color: #000;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.line{
+    background: #4853CD;
+    height: 3px; 
+    width: 100%; 
+    position: absolute;
+    top:100px;
+    left: 250px;
+}
+
+.teach-name{
+    color: #000;
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.profile-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.profile-row1{
+    display: flex;
+    flex-direction: column;
+}
+.img-to-edit{
+    width: 200px;
+    
+}
+
+/*level-lesson*/
+.dropdown-level{
+    color: #4853CD;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 15px;
+background: #FFD9E7;
+border: none;
+padding: 1%;
+margin-top: 1%;
+}
+.lessons{
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    background: rgba(72, 83, 205, 0.54);
+    width: 1062px;
+    
+    
+}
+.lesson-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    flex-direction: column;
+    align-items: center;
+}
+.line1{
+    background: #4853CD;
+    height: 3px; 
+    width: 100%; 
+    position: relative;
+    margin: 2%;
+}
+.lesson-form{
+    width: 1047px;
+height: 84px;
+flex-shrink: 0;
+border-radius: 20px;
+background: rgba(255, 217, 231, 0.29);
+padding: 1%;
+}
+
+.input-lesson{
+    background: rgba(255, 217, 231, 0.29);
+    border-radius: 20px;
+    padding: 1%;
+    border: none;
+}
+
+/*assessment*/
+.assessment-div{
+    display: flex;
+    flex-direction: column;
+}
+/*attendance*/
+.attendance{
+    display: flex;
+    flex-direction: column;
+}
+th {
+    background-color: #4853CD;
+    color: #fff;
+    padding: 0.5em 1em;
+}
+
+td {
+    border-top: 2px solid #4853cd8c;
+    padding: 1.5em 2em;
+}
+
+input {
+    cursor: pointer;
+}
+
+
+
