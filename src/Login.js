@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Login({ setUserRole }) {
+function Login({ setUserRole, setUserId }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
 
   const navigate = useNavigate();
 
@@ -19,9 +20,9 @@ function Login({ setUserRole }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.role) {
+        if (data.role && data.userId) {
           setUserRole(data.role);
-
+          setUserId(data.userId);
           // Redirect to the appropriate dashboard based on the user's role
           if (data.role === 'student') {
             navigate('/student');

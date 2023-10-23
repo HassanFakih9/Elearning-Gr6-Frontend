@@ -1,10 +1,13 @@
 import React from 'react';
+import EnrollmentForm from './EnrollmentForm';
+import LanguageSelection from './LanguageSelection';
 
-const StudentDashboard = () => {
+const StudentDashboard = ({userId}) => {
   return (
     <div>
       <h2>Student Dashboard</h2>
-      {/* Add content and functionality specific to the student dashboard */}
+     <EnrollmentForm userId={userId}/>
+     <LanguageSelection userId={userId}/>
     </div>
   );
 };

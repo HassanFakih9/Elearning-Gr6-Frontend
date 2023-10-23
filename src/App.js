@@ -7,9 +7,11 @@ import AdminDashboard from './AdminDashboard';
 
 function App() {
   const [userRole, setUserRole] = useState(null);
+  const [userId, setUserId] = useState('');
 
-  const handleSetUserRole = (role) => {
+  const handleSetUserRole = (role, id) => {
     setUserRole(role);
+    setUserId(id);
   };
 
   function RedirectToLogin() {
@@ -20,12 +22,19 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login setUserRole={handleSetUserRole} />} />
-
-        <Route path="/student" element={userRole === 'student' ? <StudentDashboard /> : <RedirectToLogin />} />
-        <Route path="/teacher" element={userRole === 'teacher' ? <TeacherDashboard /> : <RedirectToLogin />} />
-        <Route path="/admin" element={userRole === 'admin' ? <AdminDashboard /> : <RedirectToLogin />} />
-        
+        <Route path="/login" element={<Login setUserRole={handleSetUserRole} setUserId={setUserId} />} />
+        <Route
+          path="/student"
+          element={userRole === 'student' ? <StudentDashboard userId={userId} /> : <RedirectToLogin />}
+        />
+        <Route
+          path="/teacher"
+          element={userRole === 'teacher' ? <TeacherDashboard userId={userId} /> : <RedirectToLogin />}
+        />
+        <Route
+          path="/admin"
+          element={userRole === 'admin' ? <AdminDashboard userId={userId} /> : <RedirectToLogin />}
+        />
         <Route path="*" element={<RedirectToLogin />} />
       </Routes>
     </Router>
@@ -33,3 +42,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
