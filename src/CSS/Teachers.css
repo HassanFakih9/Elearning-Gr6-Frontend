@@ -12,6 +12,8 @@
     text-align: center;
     font-size: 50px;
     font-weight: 700;
+    margin-top: 50px;
+    font-family: Poppins;
 }
 
 .Teachers-grid {
@@ -20,7 +22,20 @@
     margin: 50px 80px;
 }
 
+.Teachers-background {
+    border-radius: 30% 70% 70% 30% / 48% 50% 50% 52%;
+}
+
 .Teachers-image {
     height: 240px;
     width: 200px;
+}
+
+.Teachers-name {
+    text-align: center;
+    color: #4853CD;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: larger;
+    font-family: Poppins;
 }
