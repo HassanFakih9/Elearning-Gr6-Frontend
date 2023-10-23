@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CSS/login.css';
 
 function Login({ setUserRole, setUserId }) {
   const [email, setEmail] = useState('');
@@ -80,27 +81,12 @@ function Login({ setUserRole, setUserId }) {
   };
   return (
     <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-      <h2>Sign Up</h2>
+      <div className="login-body">
+      <div className="main"> 
+      <input type="checkbox" id="chk" aria-hidden="true"></input>
+      <div className="signup">
+        <form>
+        <label className="signup_login" for="chk" aria-hidden="true">Sign up</label>
       <input
         type="text"
         placeholder="Name"
@@ -134,9 +120,35 @@ function Login({ setUserRole, setUserId }) {
         <option value="teacher">Teacher</option>
         <option value="admin">Admin</option>
       </select>
-      <button onClick={handleSignup}>Sign Up</button>
+      <button  onClick={handleSignup}>Sign Up</button>
 
       {message && <p>{message}</p>}
+      </form>
+      </div>
+      <div className="login">
+      <label className="signup_login" for="chk" aria-hidden="true">Login</label>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Email:
+          <input className="email_input"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+        <label>
+          Password:
+          <input className="email_input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+      </div>
+      </div>
+      </div>
     </div>
   );
 }
