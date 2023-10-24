@@ -22,9 +22,9 @@
     margin: 50px 80px;
 }
 
-.Teachers-background {
+/* .Teachers-background {
     border-radius: 30% 70% 70% 30% / 48% 50% 50% 52%;
-}
+} */
 
 .Teachers-image {
     height: 240px;
@@ -38,4 +38,21 @@
     font-weight: bold;
     font-size: larger;
     font-family: Poppins;
+}
+
+/*Tablet*/
+@media screen and (min-width:767px) and (max-width:1023px) {}
+
+/*Phone*/
+@media (max-width: 766px) {
+    .Teachers-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Teachers-name {
+        margin-bottom: 40px;
+    }
 }
