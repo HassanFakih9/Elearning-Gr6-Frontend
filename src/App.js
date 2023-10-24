@@ -24,7 +24,9 @@ function App() {
     <div>
       <About/>
     <Router>
+
       <Routes>
+        
         <Route path="/login" element={<Login setUserRole={handleSetUserRole} setUserId={setUserId} />} />
         <Route
           path="/student"
