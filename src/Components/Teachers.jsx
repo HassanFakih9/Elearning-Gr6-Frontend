@@ -7,7 +7,7 @@ function Teachers() {
             <h3 className="Teachers-heading">Teachers</h3>
             <div className="Teachers-grid">
                 <div className='Teachers-background'>
-                    <img className="Teachers-image" src="../Images/Teacher_1.jpg" alt="" />
+                    <img className="Teachers-image" src="../Images/Teacher_1_png.png" alt="" />
                     <p className='Teachers-name'> Ms. W </p>
                 </div>
                 <div>
