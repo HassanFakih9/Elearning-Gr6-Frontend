@@ -4,12 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import About from './Components/About';
+import AdminDashboard from './AdminDashboard';
+import NewUsers from './NewUsers';
+import TeacherDashboard from './TeacherDashboard';
+import Dashprofile from './Pages/Dashprofile';
+import DashboardSidebar from './Pages/DashboardSidebar';
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <DashboardSidebar/>
   </React.StrictMode>
 );
 

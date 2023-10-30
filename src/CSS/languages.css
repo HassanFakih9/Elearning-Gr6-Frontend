@@ -16,9 +16,10 @@
 }
 
 .language-container{
-    display: flex;
-    justify-content: space-between;
-    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5%;
+    margin: 2%;
 }
 
 .language-box{
@@ -67,8 +68,9 @@ padding-bottom: 2%;
 @media screen and (max-width: 766px){
     .language-container{
         display: grid;
-        gap: 5%;
-        justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 5%; 
+    justify-content: center;
     }  
 
     .language-box{

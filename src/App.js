@@ -7,6 +7,10 @@ import AdminDashboard from './AdminDashboard';
 import About from './Components/About'
 import Languages from './Components/Langauges';
 import axios from 'axios';
+import HeroSection from './Components/HeroSection';
+import Teachers from './Components/Teachers';
+
+
 
 function App() {
  
@@ -40,6 +44,7 @@ function App() {
 
   return (
     <div>
+      <HeroSection/>
       <About/>
       <h1 className="language-title">Languages</h1>
       <div className="language-container">
@@ -52,6 +57,8 @@ function App() {
           />
         ))}
         </div>
+        <Teachers/>
+     {/* <DashboardSidebar/> */}
           
     <Router>
       <Routes>
