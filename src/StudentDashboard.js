@@ -1,6 +1,6 @@
 import React from 'react';
 import EnrollmentForm from './EnrollmentForm';
-import NewLanguageSelection from './NewLanguageSelection';
+import StartLearning from './StartLearning';
 
 
 const StudentDashboard = ({userId}) => {
@@ -8,7 +8,7 @@ const StudentDashboard = ({userId}) => {
     <div>
       <h2>Student Dashboard</h2>
      <EnrollmentForm userId={userId}/>
-     <NewLanguageSelection userId={userId}/>
+     <StartLearning userId={userId}/>
     </div>
   );
 };
