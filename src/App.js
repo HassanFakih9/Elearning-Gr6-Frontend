@@ -1,55 +1,77 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Login from './Login';
-import StudentDashboard from './StudentDashboard';
-import TeacherDashboard from './TeacherDashboard';
-import AdminDashboard from './AdminDashboard';
-import About from './Components/About'
-
+import logo from './logo.svg';
+import './App.css';
+import React from 'react';
+import img1 from './Images/icon-fb.png';
+import img2 from './Images/icon-insta.png';
+import img3 from './Images/icon-link.png';
+import img4 from './Images/Mention-amico (1) 1.png';
 function App() {
-  const [userRole, setUserRole] = useState(null);
-  const [userId, setUserId] = useState('');
-
-  const handleSetUserRole = (role, id) => {
-    setUserRole(role);
-    setUserId(id);
-  };
-
-  function RedirectToLogin() {
-    // Use the navigate function to redirect to the login page
-    return <Navigate to="/login" replace />;
-  }
 
   return (
-    <div>
-      <About/>
-    <Router>
+    <footer>
+      <div className="container">
+        <div className="column1">
+          <p className="follow">Follow us</p>
+          <a href="www.facebook.com">
+            <div className="item1">
+              <img className="imgg1" src={img1} alt="Images"/>
+            </div>
+          </a>
 
-      <Routes>
-        
-        <Route path="/login" element={<Login setUserRole={handleSetUserRole} setUserId={setUserId} />} />
-        <Route
-          path="/student"
-          element={userRole === 'student' ? <StudentDashboard userId={userId} /> : <RedirectToLogin />}
-        />
-        <Route
-          path="/teacher"
-          element={userRole === 'teacher' ? <TeacherDashboard userId={userId} /> : <RedirectToLogin />}
-        />
-        <Route
-          path="/admin"
-          element={userRole === 'admin' ? <AdminDashboard userId={userId} /> : <RedirectToLogin />}
-        />
-        <Route path="*" element={<RedirectToLogin />} />
-      </Routes>
-    </Router>
-    </div>
+          <a href="www.facebook.com">
+            <div className="item2">
+              <img
+                src={img2}
+                alt="Images"
+                className="imgg2"
+              />
+            </div>
+          </a>
+          <a href="www.facebook.com">
+            <div className="item3">
+              <img
+                src={img3}
+                alt="Images"
+                className="imgg3"
+              />
+            </div>
+          </a>
+        </div>
+        <div className="column2">
+          <div className="title">Get in touch</div>
+          <form action="process_form.php" method="post">
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <div className="input-container">
+                <input type="text" id="name" name="name" required />
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <div className="input-container">
+                <input type="email" id="email" name="email" required />
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message:</label>
+              <div className="input-container">
+                <textarea id="message" name="message" required></textarea>
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="form-group3">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+        <div className="column3">
+          <img src={img4} alt="Images" className="Mention-amico" />
+        </div>
+      </div>
+    </footer>
   );
 }
 
 export default App;
-
-
-
-
-
